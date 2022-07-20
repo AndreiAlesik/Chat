@@ -2,15 +2,48 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Hello chat</title>
-</head>
-<body onload="connect()">
-<div>
-    <label>Your Message:</label><input type="text"/>
-    <button>Send</button>
-    <p></p>
-</div>
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
 
+
+
+    <title>Messenger</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+
+    <style>
+
+        body{background-color:skyblue;}
+        h1 {
+            background-color:#B4E1B7;
+            border: 1px solid silver;
+            min-width: 700px;
+            padding: 30px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            font-size: 20px;
+
+        }
+
+    </style>
+</head>
+<body onload="connect()" >
+<div class="container">
+    <label>User:</label>
+    <input id="user" type="text" class="form-control"/><br>
+
+    <label>You message:</label>
+    <input id="messageToSend" type="text" class="form-control"/><br>
+
+    <button onclick="sendMessage()" class="btn btn-primary">Send</button>
+    <p id="reponse"></p>
+</div>
 <script src="js.js"></script>
 <script src="stomp.js"></script>
 </body>
