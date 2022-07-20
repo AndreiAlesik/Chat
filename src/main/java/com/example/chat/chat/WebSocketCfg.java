@@ -1,4 +1,4 @@
-package com.example.chat;
+package com.example.chat.chat;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.messaging.simp.config.MessageBrokerRegistry;
@@ -20,7 +20,5 @@ public class WebSocketCfg implements WebSocketMessageBrokerConfigurer {
     public void configureMessageBroker(MessageBrokerRegistry registry) {
         registry.enableSimpleBroker("/topic");
         registry.setApplicationDestinationPrefixes("/app");
-
-        WebSocketMessageBrokerConfigurer.super.configureMessageBroker(registry);
     }
 }

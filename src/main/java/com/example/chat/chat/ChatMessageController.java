@@ -1,4 +1,4 @@
-package com.example.chat;
+package com.example.chat.chat;
 
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.SendTo;
@@ -9,7 +9,7 @@ public class ChatMessageController {
     @MessageMapping("/chat")
     @SendTo("/topic/messages")
     public ChatMessage get(ChatMessage chatMessage){
-        return new ChatMessage(chatMessage.getValue());
+        return chatMessage;
     }
 
 
